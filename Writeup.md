@@ -10,15 +10,15 @@ I used the dataset provided by Udacity. About 8000 images. I did not record imag
 
 The dataset contains JPG images of dimensions 160x320x3. Here are some sample images from the dataset.
 
-![Sample Images](assets/sample_images.png)
+![Sample Images](./assets/sample_images.png)
 
 ## Unbalanced Data
 Most of the steering angles are close to zero, on the negative side. There is a bias towards driving straight and turning left.
-![Unbalanced data](assets/unbalanced_data.png)
+![Unbalanced data](./assets/unbalanced_data.png)
 
 ## Left/Right Camera ~= Parallel Transformation of the car
 The left and right cameras point straight, along the length of the car. So the left and right camera are like parallel transformations of the car.
-![Cameras](assets/cameras.png)
+![Cameras](./assets/cameras.png)
 
 # Augmentation Techniques Used
 
@@ -33,7 +33,7 @@ In this you adjust the brightness of the image to simulate driving in different 
 
 With these augmentation techniques, you can practically generate infinite unique images for training your neural network.
 
-![Augmented Images](assets/augmentation.png)
+![Augmented Images](./assets/augmentation.png)
 
 # Preproceesing Images
 1. We can remove the hood of the car is visible in the lower portion of the image.
@@ -43,14 +43,14 @@ After trial and error I figured out that shaving 55 pixels from the top and 25 p
 
 Finally the image is resized to 64x64. Here is how a sample image could look like:
 
-![**Final Image 64x64x3 image**](assets/resized.png)
+![**Final Image 64x64x3 image**](./assets/resized.png)
 
 ## Data Generation Techniques Used
 Data is augmented and generated on the fly using python generators. So for every epoch, the optimizer practically sees a new and augmented data set.
 
 ## Model Architecture
 
-![Model Architecture](assets/model_architecture.png)
+![Model Architecture](./assets/model_architecture.png)
 
 1. **Layer 1**: Conv layer with 32 5x5 filters, followed by ELU activation
 2. **Layer 2**: Conv layer with 16 3x3 filters, ELU activation, Dropout(0.4) and 2x2 max pool
@@ -69,7 +69,7 @@ Data is augmented and generated on the fly using python generators. So for every
 
 ## Evaluation Video
 
-You can watch the video by [clicking here]("./Track1.mp4").
+You can watch the video by [clicking here](./Track1.mp4).
 
 
 
