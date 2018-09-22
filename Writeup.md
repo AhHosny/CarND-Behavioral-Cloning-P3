@@ -69,7 +69,7 @@ Data is augmented and generated on the fly using python generators. So for every
 
 ## Evaluation Video
 
-You can watch the video by [clicking here](./Track1.mp4).
+To watch the video [click here](./Track1.mp4).
 
 
 
